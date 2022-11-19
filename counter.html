@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter project</title>
+    <style>
+        main{
+            text-align: center;
+            padding: 200px;
+            /* background-color: gray; */
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: 2px solid;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            color: green;
+        }
+        #counter{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="counter">
+            0
+        </div>
+        <div class="btns">
+            <button id="increment">Increment</button>
+            <button id="reset">Reset</button>
+            <button id="decrement">Decrement</button>
+        </div>
+    </main>
+    <script>
+        const counter=document.getElementById("counter");
+        const incrementbtn=document.getElementById("increment");
+        const resetbtn=document.getElementById("reset");
+        const decrementbtn=document.getElementById("decrement");
+
+        let countervalue = 0;
+
+        incrementbtn.addEventListener("click",function(event){
+            countervalue += 1;
+            counter.innerHTML=countervalue;
+        })
+        decrementbtn.addEventListener("click",function(event){
+            countervalue -= 1;
+            counter.innerHTML=countervalue;
+        })
+        resetbtn.addEventListener("click",function(event){
+            countervalue = 0;
+            counter.innerHTML=countervalue;
+        })
+
+    </script>
+</body>
+</html>
